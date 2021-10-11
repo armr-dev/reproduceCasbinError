@@ -5383,6 +5383,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"await-lock@npm:^2.0.1":
+  version: 2.1.0
+  resolution: "await-lock@npm:2.1.0"
+  checksum: bbd211470e3b59a7a18f7c58037eb2a04839b42e372001bdbd6e19193264988ec0855c56696f7fd8769cd6836fa80307e92e9eecb4b0645411bbd9f85cd1c5d4
+  languageName: node
+  linkType: hard
+
 "axe-core@npm:^4.0.2":
   version: 4.3.3
   resolution: "axe-core@npm:4.3.3"
@@ -6340,6 +6347,18 @@ __metadata:
   dependencies:
     rsvp: ^4.8.4
   checksum: 0b9f10daca09e521da9599f34c8e7af14ad879c336e2bdeb19955b375398ae1c5bcc91ac9f2429944343057ee9ed028b1b2fb28816c384e0e55d70c439b226f4
+  languageName: node
+  linkType: hard
+
+"casbin@npm:^5.11.5":
+  version: 5.11.5
+  resolution: "casbin@npm:5.11.5"
+  dependencies:
+    await-lock: ^2.0.1
+    csv-parse: ^4.15.3
+    expression-eval: ^4.0.0
+    picomatch: ^2.2.3
+  checksum: b1c1db2e672aca18ad51f1542ae3f29d32e097e88ca86564f28227f43e66517feb6d44d7be1e06b0cc0575aa62f93ae1796a8977541734c675d60da8a7c6f8e4
   languageName: node
   linkType: hard
 
@@ -7523,6 +7542,13 @@ __metadata:
   version: 3.0.9
   resolution: "csstype@npm:3.0.9"
   checksum: 199f9af7e673f9f188525c3102a329d637ff46c52f6385a4427ff5cb17adcb736189150170a7af7c5701d18d7704bdad130273f4aa7e44c6c4f9967e6115dc93
+  languageName: node
+  linkType: hard
+
+"csv-parse@npm:^4.15.3":
+  version: 4.16.3
+  resolution: "csv-parse@npm:4.16.3"
+  checksum: 5ad7790fc31c32ca1623bad1a54906134ba44fa109e8dd2dfda440bf7e9fd93610d9076a78f45c872701bfafdf7f93c9b75500c09d7efd6611d863f1d45ec69f
   languageName: node
   linkType: hard
 
@@ -8957,6 +8983,15 @@ __metadata:
     utils-merge: 1.0.1
     vary: ~1.1.2
   checksum: d964e9e17af331ea6fa2f84999b063bc47189dd71b4a735df83f9126d3bb2b92e830f1cb1d7c2742530eb625e2689d7a9a9c71f0c3cc4dd6015c3cd32a01abd5
+  languageName: node
+  linkType: hard
+
+"expression-eval@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "expression-eval@npm:4.0.0"
+  dependencies:
+    jsep: ^0.3.0
+  checksum: 3599e74d5e84d96a2faea85e05cffd692191fe600f0c95ab18a47ec4c4eb6d86550d3a91290a565c5cc186566b1dcfad6c70e137b040f336277816c00c6f2486
   languageName: node
   linkType: hard
 
@@ -12039,6 +12074,13 @@ fsevents@^1.2.7:
     canvas:
       optional: true
   checksum: 454b83371857000763ed31130a049acd1b113e3b927e6dcd75c67ddc30cdd242d7ebcac5c2294b7a1a6428155cb1398709c573b3c6d809218692ea68edd93370
+  languageName: node
+  linkType: hard
+
+"jsep@npm:^0.3.0":
+  version: 0.3.5
+  resolution: "jsep@npm:0.3.5"
+  checksum: fb89b4ca9d85d3f4ec9edb079c042ffad1c548e00297d7c08e90194e7c8688e09e52a5781af2e028d51fc86fd6a9089a5e5fc0cd2a6c778e4e4531a1a3ff7015
   languageName: node
   linkType: hard
 
@@ -16281,6 +16323,7 @@ fsevents@^1.2.7:
     "@types/node": ^12.20.28
     "@types/react": ^17.0.27
     "@types/react-dom": ^17.0.9
+    casbin: ^5.11.5
     react: ^17.0.2
     react-dom: ^17.0.2
     react-scripts: 4.0.3

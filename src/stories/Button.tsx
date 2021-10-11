@@ -1,5 +1,6 @@
 import React from 'react';
 import './button.css';
+import { Enforcer } from 'casbin'
 
 interface ButtonProps {
   /**
@@ -35,6 +36,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const enforcer = new Enforcer();
   return (
     <button
       type="button"

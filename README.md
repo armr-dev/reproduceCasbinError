@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+## Steps to reproduce the Issue
+1. Install `casbin` from `npm`;
+2. Import anything from `casbin` to any component that has a `.stories` file;
+3. Run the storybook;
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+That's it. The issue should appear.
+```
+ERROR in ./node_modules/casbin/lib/esm/util/util.js
+Module not found: Error: Can't resolve 'fs' in '/Users/armr/Documents/repro_casbin/node_modules/casbin/lib/esm/util'
+ @ ./node_modules/casbin/lib/esm/util/util.js 14:0-25 74:8-19 85:8-20
+ @ ./node_modules/casbin/lib/esm/util/index.js
+ @ ./node_modules/casbin/lib/esm/index.js
+ @ ./src/stories/Button.tsx
+ @ ./src/stories/Button.stories.tsx
+ @ ./src sync ^\.(?:(?:^|\/|(?:(?:(?!(?:^|\/)\.).)*?)\/)(?!\.)(?=.)[^/]*?\.stories\.(js|jsx|ts|tsx))$
+ @ ./generated-stories-entry.js
+ @ multi ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js ./node_modules/@storybook/core-client/dist/esm/globals/polyfills.js ./node_modules/@storybook/core-client/dist/esm/globals/globals.js (webpack)-hot-middleware/client.js?reload=true&quiet=false&noInfo=undefined ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ErrorOverlayEntry.js ./storybook-init-framework-entry.js ./node_modules/@storybook/addon-docs/dist/esm/frameworks/common/config.js-generated-config-entry.js ./node_modules/@storybook/addon-docs/dist/esm/frameworks/react/config.js-generated-config-entry.js ./node_modules/@storybook/addon-links/dist/esm/preset/addDecorator.js-generated-config-entry.js ./node_modules/@storybook/addon-actions/dist/esm/preset/addDecorator.js-generated-config-entry.js ./node_modules/@storybook/addon-actions/dist/esm/preset/addArgs.js-generated-config-entry.js ./node_modules/@storybook/addon-backgrounds/dist/esm/preset/addDecorator.js-generated-config-entry.js ./node_modules/@storybook/addon-backgrounds/dist/esm/preset/addParameter.js-generated-config-entry.js ./node_modules/@storybook/addon-measure/dist/esm/preset/addDecorator.js-generated-config-entry.js ./node_modules/@storybook/addon-outline/dist/esm/preset/addDecorator.js-generated-config-entry.js ./.storybook/preview.js-generated-config-entry.js ./generated-stories-entry.js
+```
